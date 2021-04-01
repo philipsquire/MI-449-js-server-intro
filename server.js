@@ -20,7 +20,7 @@ const server = http.createServer(function (request, response) {
   } else if (request.url === '/cuteness') {
     response.end('<h1>Look at all those kittens!</h1><img src = "https://preview.redd.it/asrktbla0kq61.jpg?width=960&crop=smart&auto=webp&s=c98fc2c7db6b62e3ef4f9599c580e9b26b4200b7" alt = "A family of cats."><p><p>Click <a href="/">here</a> to go back to the start.</p>')
   } else {
-    response.end('<h1>It seems you\'ve gotten lost.</h1><p>Click <a href="/">here</a> to go back to the start.</p>')
+    response.end('<h1>It seems you\'ve gotten lost.</h1><p>The requested url ' + request.url + ' is not available. Click <a href="/">here</a> to go back to the start.</p>')
   }
 })
 
